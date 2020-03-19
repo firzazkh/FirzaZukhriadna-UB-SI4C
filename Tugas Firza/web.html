@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+
+.container{
+    border: 1px solid black;
+    width: 800px;
+    height: 1300px;
+    margin-bottom: 10px;
+    margin: auto;
+    top: 10px;
+    bottom: 10px;
+    position: relative;
+    bottom: 20px;
+}
+.mode{
+    border: 1px solid  seagreen;
+    margin-top: 10px;
+    right: 800px;
+    width: 200px;
+    height: 150px;
+    background-color: white;
+    border-radius: 10px;
+    left: 1400px;
+    position: fixed;
+}
+.malam{
+    background-color: rgb(143, 188, 144);
+    width: 150px;
+    height: 50px;
+    top: 20px;
+    margin-left: 25px;
+    position: absolute;
+}
+
+.siang{
+    background-color:rgb(233, 150, 122);
+    width: 150px;
+    height: 50px;
+    top: 80px;
+    margin-left: 25px;
+    position: absolute;
+}
+.ribbon{
+    background-image: url(ribbon.png);
+    background-size: cover;
+    width: 90px;
+    height: 90px;
+    left:700px;
+    position: absolute;
+    
+}
+.judul{
+    border: 1px solid black;
+    width: 800px;
+    height: 80px;
+    margin: auto;
+    border: black;
+    border-style: dotted;
+    box-sizing: border-box;
+    text-size-adjust: 50px;
+}
+
+.menu{
+    border: 1px solid black;
+    width: 800px;
+    height: 50px;
+    margin: auto;
+
+}
+.banner{
+    border: 1px solid black;
+    width: 800px;
+    height: 400px;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.gallery{
+    width: 190px;
+    height: 150px;
+    margin: 5px 5px 5px 5px;
+    background-color: burlywood;
+    float: left;
+}
+
+.artikel{
+    border: 1px solid black;
+    width: 800px;
+    height: 470px;
+    margin: auto;
+    border: black;
+    border-style: dotted;
+    box-sizing: border-box;
+    overflow: auto;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.artikel img{
+    float: left;
+    padding-right: 30px;
+}
+
+.kotak{
+    background-color: limegreen;
+    width: 100px;
+    height: 100px;
+    left: 20px;
+    bottom: 10px;
+    position: absolute;
+    position: fixed;
+}
+.kotak2{
+    background-color: mediumpurple;
+    width: 100px;
+    height: 100px;
+    left: 20px;
+    bottom: 10px;
+    position: absolute;
+    position: fixed;
+}
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+</style>
+
+<body>
+
+    <script>
+        function ubahwarna_dark(){
+            document.getElementById('artikel').style.backgroundColor="black";
+            document.getElementById('artikel').style.color="white";
+            document.getElementById('artikel').style.border="5px dashed grey"
+        }
+
+        function ubahwarna_light(){
+            document.getElementById('artikel').style.backgroundColor="white";
+            document.getElementById('artikel').style.color="black";
+        }
+
+        function divkelakuan(){
+            document.getElementById('cobakotak').className="kotak2";
+        }
+        function divkelakuan1(){
+            document.getElementById('cobakotak').className="kotak";
+        }
+
+
+
+    </script>
+
+
+<div class ="mode">
+    
+    <button type="button" onclick="ubahwarna_dark()" class="malam" >
+        <center>Mode Malam  Hari</center>
+    </button>
+    <button type="button" onclick="ubahwarna_light()" class="siang">
+        Mode Siang  Hari
+    </button>
+</div>
+
+<div class="container">
+    
+    <div class="ribbon">
+         </div>
+
+    <div class="judul">
+        <h1><center>MY WEBSITE</center></h1>
+        
+    </div>
+
+    <div class="menu">
+        <center>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Profile</a></center>      
+    </div>
+
+    <div class="banner">
+    <center><img src="twit1.jpg" width="735px"></center>
+    </div>
+
+    <div class="artikel" id="artikel">
+        <img src="twit2.jpg" width="155px">
+        <h1>Twitter adalah sebuah situs web yang dimiliki dan dioperasikan oleh Twitter Inc., yang menawarkan jejaring sosial berupa mikroblog sehingga memungkinkan penggunanya untuk mengirim dan membaca pesan yang disebut kicauan[3] (tweets). Kicauan adalah teks tulisan hingga 140 karakter yang ditampilkan pada halaman profil pengguna. Kicauan bisa dilihat secara luar, namun pengirim dapat membatasi pengiriman pesan ke daftar teman-teman mereka saja. Pengguna dapat melihat kicauan penulis lain yang dikenal dengan sebutan pengikut. Semua pengguna dapat mengirim dan menerima kicauan melalui situs Twitter, aplikasi eksternal yang kompatibel (telepon seluler), atau dengan pesan singkat (SMS) yang tersedia di negara-negara tertentu. Situs ini berbasis di San Bruno, California dekat San Francisco, di mana situs ini pertama kali dibuat. Twitter juga memiliki server dan kantor di San Antonio, Texas dan Boston, Massachusetts. Sejak dibentuk pada tahun 2006 oleh Jack Dorsey, Twitter telah mendapatkan popularitas di seluruh dunia dan saat ini memiliki lebih dari 100 juta pengguna. Hal ini kadang-kadang digambarkan sebagai "SMS dari internet".</h1>
+        <p>Twitter berawal dari sebuah diskusi yang diselenggarakan oleh anggota dewan dari Podcasting perusahaan Odeo. Dalam pertemuan tersebut, Jack Dorsey memperkenalkan ide twitter dimana individu bisa menggunakan SMS layanan untuk berkomunikasi dengan sebuah kelompok kecil. Proyek ini dimulai pada tanggal 21 secara terbuka pada tanggal 15 Juli 2006. Twitter menjadi perusahaan sendiri pada bulan April 2007. Popularitas Twitter mulai meningkat pada tahun 2007 ketika terdapat festival South by Southwest (SXSW). Selama acara tersebut berlangsung, penggunaan Twitter meningkat dari 20.000 kicauan perhari menjadi 60.000. Reaksi di festival itu sangat positif. Pada tanggal 14 September 2010, Twitter mengganti logo dan meluncurkan desain baru.</p>
+        <p>Di Indonesia, Twitter sangat populer. Terlebih lagi kemudahan yang disediakan oleh telepon seluler yang ada serta aplikasi yang mendukung. hal ini membuat Indonesia menduduki peringkat ke enam sebagai negara dengan pengguna Twitter terbanyak, meski Amerika masih menjadi negara nomor satu untuk urusan Twitter.
+            Banyak yang mengatakan bahwa twitter adalah cara yang baik untuk tetap berhubungan dengan teman-teman. Namun, beberapa pengguna merasa 'terlalu' terhubung, karena mereka selalu menerima pesan yang tidak relevan dengan kebutuhan mereka. Berbagai penelitian di sekitar Twitter telah dilakukan seperti bidang sosiologi dan perilaku. Sebuah penelitian dilakukan Bruno Goncalves menyatakan bahwa jaringan sosial modern membantu seseorang berinteraksi namun kendala biologis dan fisik membatasi hubungan sosial secara stabil. Nielsen Online melaporkan bahwa Twitter memiliki tingkat pemeliharaan pengguna sebesar 40%. Banyak orang berhenti menggunakan layanan ini setelah satu bulan karena situs ini berpotensi mencapai hanya sekitar 10% dari semua pengguna internet.</p>    
+        <p>Pada bulan Maret 2009, komik strip Doonesbury mulai menyindir Twitter. Banyak karakter menyoroti kicauan yang mengikuti pemutakhiran topik hangat (trend updates) terus-menerus. SuperNews! juga mengatakan bahwa Twitter sebagai kecanduan dan mengatakan kicauan tidak lebih dari “teriakan ke kegelapan berharap seseorang mendengarkan”. Scott A. Golder dan Michael W. Macy menganalisis lebih dari 500.000 update oleh 2,4 juta pengguna Twitter di 84 negara selama 2 tahun. Data dibagi menjadi kelompok-kelompok update berdasarkan jam. Temuan menunjukkan Twitter menegaskan pola seharian.  Alessio Signorini menggunakan data menciak pengguna Twitter untuk mengganalisis tingkat penyebaran flu H1N1 di Amerika Serikat. Marcel Salathé dan Shashank Khandelwal melacak bagaimana pola pikir pengguna Twitter berkorelasi dengan tingkat partisipasi vaksinasi H1N1 dan bagaimana perasaan negatif atau positif mempengaruhi pengguna lain.</p>
+        </div>
+
+    <div class="gallery">
+        
+    </div>
+    <div class="gallery">
+        ha
+    </div>
+    <div class="gallery">
+        ha
+    </div>
+    <div class="gallery">
+        ha
+    </div>
+</div> 
+
+<div id="cobakotak" class="kotak" onmouseup="divkelakuan()" onmousedown="divkelakuan1()">
+
+</div>
+</body>
+</html>
