@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.container{
+    width: 512px;
+    height: 512px;
+    border : 2px solid black;
+}
+.kotak{
+    width: 513px;
+    height: 104px;
+    border : 2px solid black;
+    background-size: 10px;
+}
+.buttongambar{
+    margin-top: -18px;
+    width: 124px;
+    height: 100px;
+    float: left;
+    border : 1px solid black;
+    padding-left: 2px;
+}
+
+</style>
+
+<body>
+
+<div class="container" id="ganti">
+</div>
+
+    <div id="kotak" class="kotak">
+        <br>
+        <div class="buttongambar" type="button" id="kotak" onclick="gam1()" style="background-image: url(gam1.png); background-size: 95px; background-repeat: no-repeat; background-position: center;"></div>
+        <div class="buttongambar" type="button" id="kotak" onclick="gam2()"  style="background-image: url(gam2.png); background-size: 95px; background-repeat: no-repeat; background-position: center;"></div>
+        <div class="buttongambar" type="button" id="kotak" onclick="gam3()" style="background-image: url(gam3.png); background-size: 95px; background-repeat: no-repeat; background-position: center;"></div>
+        <div class="buttongambar" type="button" id="kotak" onclick="gam4()" style="background-image: url(gam4.png); background-size: 95px; background-repeat: no-repeat; background-position: center;"></div>
+        <br>
+    </div>    
+
+<script>
+    function gam1(){
+        document.getElementById('ganti').style.backgroundImage="url(gam1.png)";
+    }
+
+    function gam2(){
+        document.getElementById('ganti').style.backgroundImage="url(gam2.png)";
+    }
+
+    function gam3(){
+        document.getElementById('ganti').style.backgroundImage="url(gam3.png)";
+    }
+
+    function gam4(){
+        document.getElementById('ganti').style.backgroundImage="url(gam4.png)";
+    }
+
+</script>
+
+</body>
+</html>

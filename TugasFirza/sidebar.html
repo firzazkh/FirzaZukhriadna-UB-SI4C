@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+</head>
+
+<style>
+.sidepanel{
+    width: 200px;
+    height: 100%;
+    background-color: palevioletred;
+    position: fixed;
+    transition: width 1s;
+    padding-left: 10px;
+}
+.main{
+    background-color: pink;
+    margin-left: 200px;
+    padding-left: 10px;
+}
+.main2{
+    background-color: pink;
+    margin-left: 0px;
+}
+.sidepanel2{
+    width: 0;
+    height: 0;
+    background-color: palevioletred;
+    position: fixed;
+    overflow: auto;
+}
+</style>
+<body>
+    <div class="sidepanel2" id="sidepanel">
+        <span style="font-size: 30px;cursor: pointer" onclick="closeNav()">X</span>
+        <li>HOME</li>
+        <li>PROFILE</li>
+        <li>CONTACT</li>
+
+    </div>
+    <div class="main2" id="main">
+        <span style="font-size: 30px;cursor: pointer" onclick="openNav()">&#9776;</span>
+        <h1>Ini Content Utama</h1>
+    </div>
+
+    <script>
+        function closeNav(){
+            document.getElementById('sidepanel').className="sidepanel2";
+            document.getElementById('main').className="main2";
+        }
+        function openNav(){
+            document.getElementById('sidepanel').className="sidepanel";
+            document.getElementById('main').className="main";
+        }
+    </script>
+</body>
+</html>

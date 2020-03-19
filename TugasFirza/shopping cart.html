@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.header{
+    width: 100%;
+    height: 50px;
+    background-color: burlywood;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 5px;
+}
+.header h1{
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: chocolate;
+}
+.kiri{
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 300px;
+    background-color: coral;
+    margin-top: 70px;
+    float: left;
+}
+
+.kanan{
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 30px;
+    background-color: darkgoldenrod;
+    float: left;
+    margin-top: 70px;
+}
+
+.kotak{
+    width: 23%;
+    height: 250px;
+    float: left;
+    background-color: darkkhaki;
+    margin: 5px 5px 5px 5px;
+    border: 5px black;
+
+}
+.kotak h1{
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: chocolate;
+}
+.kotak input{
+    float: right;
+}
+
+</style>
+<body>
+<div class="header">
+    <h1>FirzaPedia</h1>
+</div>
+<div class="kiri">
+    <div class="kotak">
+        <img src="heels.jpg" width="100%">
+        <h1>Rp 500.000<input type="button" onClick="tambah()" value="Beli" ></input></h1>
+        
+    </div>
+    <div class="kotak">
+        <img src="heels.jpg" width="100%">
+        <h1>Rp 700.000<button>Beli</button></h1>
+    </div>
+    <div class="kotak">
+        <img src="heels.jpg" width="100%">
+        <h1>Rp 900.000<button>Beli</button></h1>
+    </div>
+    <div class="kotak">
+        <img src="heels.jpg" width="100%">
+        <h1>Rp 300.000<button>Beli</button></h1>
+    </div>
+</div>
+<div class="kanan" id="tambah">
+    Keranjang Belanja
+</div>
+
+<script>
+    var vm = new ({
+        el : '#container',
+        data : {
+            motor:[
+                {merek:'supra', harga:5500000, image:'motor1.jpg'},
+                {merek:'mio', harga:3400000, image:'motor2.jpg'},
+                {merek:'NMax', harga:7500000, image:'motor3.jpg'},
+                {merek:'shogun', harga:3400000, image:'motor4.jpg'},
+                {merek:'satria', harga:1400000, image:'motor5.jpg'}
+            ],
+            keranjangharga:[],
+            keranjangmerek:[],
+        },
+    methods: {
+        addCart:function(merek){
+            this.keranjangmerek.push(merek);
+        },
+        removeCart:function(index) {
+            this.keranjangmerek.splice(index, 1)
+            this.keranjangharga.splice(index, 1)           
+        }
+    }
+    })
+</script>
+    
+</body>
+</html>
